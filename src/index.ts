@@ -73,7 +73,13 @@ interface WikipediaRandomResponse {
 
 // Wikipedia APIリクエスト関数
 async function wikipediaRequest<T>(url: string): Promise<T> {
-  const response = await fetch(url);
+  const response = await fetch(url, {
+    headers: {
+      'User-Agent': 'Wikipedia MCP Server/0.0.1 (https://github.com/hatsu38/wikipedia-mcp-server)',
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    }
+  });
   
   if (!response.ok) {
     throw new Error(`Wikipedia API request failed: ${response.status} ${response.statusText}`);
