@@ -15,6 +15,7 @@ Wikipedia MCP Serverは、[Model Context Protocol (MCP)](https://github.com/mode
 
 MCPクライアント（例: Cursor, Claude Desktop等）の設定ファイルに、以下のように追記してください（詳細は各クライアントのドキュメントを参照）。
 
+### npx
 ```json
 {
   "mcpServers": {
@@ -29,7 +30,22 @@ MCPクライアント（例: Cursor, Claude Desktop等）の設定ファイル�
 }
 ```
 
----
+### Docker
+```json
+{
+  "mcpServers": {
+    "wikipedia": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "hatsu38/wikipedia-mcp-server"
+      ]
+    }
+  }
+}
+```
 
 ## ツール一覧
 

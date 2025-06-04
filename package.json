@@ -9,7 +9,9 @@
   "scripts": {
     "release": "npm run build && npm publish",
     "build": "tsc && chmod 755 build/index.js",
-    "build:inspect": "npm run build && npx @modelcontextprotocol/inspector node build/index.js"
+    "build:inspect": "npm run build && npx @modelcontextprotocol/inspector node build/index.js",
+    "docker:build": "docker build -t hatsu38/wikipedia-mcp-server .",
+    "docker:push": "docker push hatsu38/wikipedia-mcp-server"
   },
   "type": "module",
   "files": [

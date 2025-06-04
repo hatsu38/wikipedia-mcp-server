@@ -15,6 +15,8 @@ Wikipedia MCP Server is a [Model Context Protocol (MCP)](https://github.com/mode
 
 Add the following configuration to your MCP client (e.g., Cursor, Claude Desktop) to use this server. (See your client's documentation for details.)
 
+
+### npx
 ```json
 {
   "mcpServers": {
@@ -29,7 +31,22 @@ Add the following configuration to your MCP client (e.g., Cursor, Claude Desktop
 }
 ```
 
----
+### Docker
+```json
+{
+  "mcpServers": {
+    "wikipedia": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "hatsu38/wikipedia-mcp-server"
+      ]
+    }
+  }
+}
+```
 
 ## Tools
 
