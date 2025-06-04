@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -7,7 +8,7 @@ const WIKIPEDIA_API_BASE = "https://ja.wikipedia.org/w/api.php";
 async function wikipediaRequest(url) {
     const response = await fetch(url, {
         headers: {
-            'User-Agent': 'Wikipedia MCP Server/0.0.1 (https://github.com/hatsu38/wikipedia-mcp-server)',
+            'User-Agent': 'Wikipedia MCP Server/0.0.2 (https://github.com/hatsu38/wikipedia-mcp-server)',
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         }
