@@ -1,6 +1,8 @@
 {
   "name": "wikipedia-mcp-server",
   "version": "0.0.1",
+  "homepage": "https://github.com/hatsu38/wikipedia-mcp-server",
+  "bugs": "https://github.com/hatsu38/wikipedia-mcp-server/issues",
   "bin": {
     "wikipedia-mcp-server": "./build/index.js"
   },
